@@ -29,7 +29,7 @@ const {
   prepareWAMessageMedia,
   generateWAMessageFromContent,
   proto
-} = require('baileys');
+} = require('@Teddytech3/MD-Baileys');
 // ---------------- CONFIG ----------------
 
 const BOT_NAME_FANCY = '*🧸 TEDDY-XMD*';
@@ -1196,7 +1196,7 @@ case 'sendme': {
             writeStream.on('finish', resolve);
         });
 
-        // 📤 File එක යැවීම (Path එක දුන්නම Baileys එක විසින්ම Handle කරනවා)
+        // 📤 File එක යැවීම (Path එක දුන්නම @Teddytech3/MD-Baileys එක විසින්ම Handle කරනවා)
         if (finalType === 'image') {
             await socket.sendMessage(sender, { 
                 image: { url: tempFilePath }, 
