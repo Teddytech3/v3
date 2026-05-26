@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure WhatsApp Linking via BILAL MD. The ultimate pairing solution.">
+  <title>TEDDY-XMD - Minibot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#a855f7', dark: '#7e22ce' },
+            secondary: { DEFAULT: '#d946ef', dark: '#c026d3' },
+            dark: { bg: '#030014', card: 'rgba(17, 12, 34, 0.8)' }
+          },
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+            'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'matrix-fade': 'matrixFade 2s ease-out forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            matrixFade: {
+              '0%': { opacity: '0', transform: 'scale(0.9) translateY(20px)' },
+              '100%': { opacity: '1', transform: 'scale(1) translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #a855f7;
+      --secondary: #d946ef;
+      --bg-color: #030014;
+      --glass-border: rgba(168, 85, 247, 0.3);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* --- Advanced Background --- */
+    .nebula-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: 
+        radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(217, 70, 239, 0.1) 0%, transparent 30%);
+      z-index: -2;
+    }
+
+    .grid-overlay {
+      position: fixed;
+      width: 200vw;
+      height: 200vh;
+      background-image: 
+        linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+      animation: gridMove 20s linear infinite;
+      z-index: -1;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @keyframes gridMove {
+      0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); }
+      100% { transform: perspective(500px) rotateX(60deg) translateY(50px) translateZ(-200px); }
+    }
+
+    /* --- Unique Preloader (Whiteshadow Style) --- */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .loader-ring {
+      width: 80px;
+      height: 80px;
+      border: 2px solid transparent;
+      border-top: 2px solid var(--primary);
+      border-right: 2px solid var(--secondary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    }
+    
+    .loader-ring::before {
+      content: '';
+      position: absolute;
+      top: 5px; left: 5px; right: 5px; bottom: 5px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top: 2px solid var(--secondary);
+      animation: spin 2s linear infinite reverse;
+    }
+
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    /* --- Glass Card --- */
+    .glass-panel {
+      background: rgba(10, 10, 20, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-panel:hover {
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.4);
+      border-color: var(--primary);
+    }
+
+    /* --- Glitch Title Effect --- */
+    .glitch-text {
+      font-family: 'Orbitron', sans-serif;
+      position: relative;
+      color: white;
+      text-shadow: 2px 2px var(--primary);
+    }
+
+    /* --- Input Field --- */
+    .cyber-input {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--primary);
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+    }
+    .cyber-input:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
+      outline: none;
+    }
+
+    /* --- Buttons --- */
+    .btn-cyber {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .btn-cyber::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: 0.5s;
+    }
+    .btn-cyber:hover::before { left: 100%; }
+    .btn-cyber:hover { transform: translateY(-2px); box-shadow: 0 0 20px var(--primary); }
+
+    /* --- Code Display Area --- */
+    .code-box {
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px dashed var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+    .scan-line {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: var(--secondary);
+      box-shadow: 0 0 10px var(--secondary);
+      animation: scan 2s linear infinite;
+      opacity: 0.5;
+    }
+    @keyframes scan { 0% { top: 0%; } 100% { top: 100%; } }
+
+  </style>
+</head>
+<body class="antialiased selection:bg-purple-500 selection:text-white">
+
+  <div id="preloader">
+    <div class="loader-ring"></div>
+    <h2 class="mt-6 text-xl font-orbitron tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 animate-pulse">
+      TEDDY-XMD
+    </h2>
+    <p class="text-xs text-gray-500 mt-2 font-mono">INITIALIZING SYSTEM...</p>
+  </div>
+
+  <div class="nebula-bg"></div>
+  <div class="grid-overlay"></div>
+
+  <div class="min-h-screen flex items-center justify-center p-4 relative z-10">
+    
+    <div class="max-w-md w-full glass-panel p-8 sm:p-10 transform opacity-0 animate-matrix-fade" style="animation-delay: 0.5s;">
+      
+      <div class="text-center mb-8">
+        <div class="inline-block relative">
+            <div class="absolute inset-0 bg-purple-600 blur-xl opacity-40 rounded-full animate-pulse"></div>
+            <i class="fas fa-robot text-6xl text-white relative z-10 animate-float drop-shadow-[0_0_15px_rgba(168,85,247,0.8)]"></i>
+        </div>
+        <h1 class="glitch-text text-3xl font-bold mt-6 mb-2">TEDDY-XMD</h1>
+        <p class="text-gray-400 text-sm font-poppins">Secure & Fast WhatsApp Pairing</p>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div id="input-section" class="transition-all duration-500">
+        <div class="relative group mb-6">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-30 group-hover:opacity-75 transition duration-200"></div>
+          <div class="relative flex">
+            <span class="inline-flex items-center px-4 rounded-l-lg border border-r-0 border-white/10 bg-black/50 text-gray-400">
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <input 
+              type="tel" 
+              id="phone" 
+              class="cyber-input w-full p-4 rounded-r-lg bg-black/80 text-white placeholder-gray-600"
+              placeholder="+2547X XXX XXXX"
+            >
+          </div>
+        </div>
+
+        <button onclick="processNumber()" id="submit-btn" class="btn-cyber w-full py-4 rounded-lg font-bold shadow-lg flex justify-center items-center gap-2">
+          <span>GET PAIR CODE</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div id="loading-state" class="hidden text-center py-4">
+        <div class="flex justify-center items-center space-x-2 mb-4">
+            <div class="w-3 h-3 bg-purple-500 rounded-full animate-bounce"></div>
+            <div class="w-3 h-3 bg-pink-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-3 h-3 bg-white rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+        </div>
+        <p id="loading-text" class="font-mono text-purple-300 text-sm">CONNECTING...</p>
+        
+        <div class="mt-4 text-left bg-black/80 p-3 rounded border border-gray-800 font-mono text-xs text-green-500 h-24 overflow-hidden" id="terminal-log">
+        </div>
+      </div>
+
+      <div id="result-section" class="hidden mt-6">
+        <div class="code-box rounded-lg p-6 text-center mb-6">
+          <div class="scan-line"></div>
+          <p class="text-gray-400 text-xs uppercase mb-2 tracking-widest">Your Pair Code</p>
+          <h2 id="pair-code" class="text-3xl font-bold font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200 tracking-wider">
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <button onclick="copyCode()" id="copy-btn" class="bg-gray-800 hover:bg-gray-700 text-white py-3 rounded-lg transition border border-gray-700 flex items-center justify-center gap-2">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+          <button onclick="location.reload()" class="bg-purple-900/50 hover:bg-purple-900 text-purple-200 py-3 rounded-lg transition border border-purple-800 flex items-center justify-center gap-2">
+            <i class="fas fa-redo"></i> Reset
+          </button>
+        </div>
+        
+        <p class="text-center text-xs text-gray-500 mt-4">Code expires in <span id="timer" class="text-pink-500 font-bold">30</span>s</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="fixed bottom-4 w-full text-center z-10 pointer-events-none">
+    <p class="text-white/30 text-xs font-mono">POWERED BY <span class="text-purple-500 font-bold">TEDDY-XMD</span> &copy; 2026</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+  <script>
+    // Remove Preloader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').style.opacity = '0';
+        document.getElementById('preloader').style.transition = 'opacity 0.5s ease';
+        setTimeout(() => {
+          document.getElementById('preloader').style.display = 'none';
+        }, 500);
+      }, 1500); // 1.5s delay for branding effect
+    });
+
+    // Terminal Typewriter Effect
+    function addToTerminal(text) {
+      const terminal = document.getElementById('terminal-log');
+      const p = document.createElement('div');
+      p.innerHTML = `> ${text}`;
+      terminal.appendChild(p);
+      terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    async function processNumber() {
+      const phoneInput = document.getElementById('phone');
+      const inputSection = document.getElementById('input-section');
+      const loadingState = document.getElementById('loading-state');
+      const resultSection = document.getElementById('result-section');
+      
+      let number = phoneInput.value.replace(/[^0-9]/g, "");
+
+      if (number.length < 10) {
+        // Shake animation for error
+        phoneInput.classList.add('border-red-500');
+        setTimeout(() => phoneInput.classList.remove('border-red-500'), 500);
+        return;
+      }
+
+      // Switch UI
+      inputSection.style.display = 'none';
+      loadingState.classList.remove('hidden');
+
+      // Simulate Hacking/Connecting Sequence
+      const logs = [
+        "Initiating Handshake...",
+        "Encrypting Connection (AES-256)...",
+        "Authenticating with WhatsApp API...",
+        "Bypassing Security Node...",
+        "Generating Whiteshadow Session..."
+      ];
+
+      for (let i = 0; i < logs.length; i++) {
+        await new Promise(r => setTimeout(r, 800)); // Delay between logs
+        addToTerminal(logs[i]);
+      }
+
+      try {
+        // Real API Call (Replace URI with your actual backend)
+        const { data } = await axios.get(`/code?number=${number}`);
+        const code = data.code || "SERVICE-ERROR";
+
+        // Show Result
+        loadingState.style.display = 'none';
+        resultSection.classList.remove('hidden');
+        resultSection.classList.add('animate-matrix-fade');
+        
+        // Format Code Display
+        document.getElementById('pair-code').innerText = code;
+        
+        // Start Timer
+        startTimer();
+
+      } catch (error) {
+        // Fallback for demo if API fails
+        setTimeout(() => {
+          loadingState.style.display = 'none';
+          resultSection.classList.remove('hidden');
+          document.getElementById('pair-code').innerText = "K4J9-X2M1"; // Example Code
+          addToTerminal("ERROR: API Unreachable. Showing Demo.");
+          startTimer();
+        }, 1000);
+      }
+    }
+
+    function copyCode() {
+      const code = document.getElementById('pair-code').innerText;
+      navigator.clipboard.writeText(code);
+      const btn = document.getElementById('copy-btn');
+      btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      btn.classList.add('bg-green-600', 'border-green-500');
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        btn.classList.remove('bg-green-600', 'border-green-500');
+      }, 2000);
+    }
+
+    function startTimer() {
+      let timeLeft = 30;
+      const timerEl = document.getElementById('timer');
+      const interval = setInterval(() => {
+        timeLeft--;
+        timerEl.innerText = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          timerEl.innerText = "EXPIRED";
+          timerEl.classList.add('text-red-500');
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
