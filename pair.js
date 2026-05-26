@@ -1998,7 +1998,7 @@ case 'alive': {
     const logo      = config.RCD_IMAGE_PATH;
     const version   = config.VERSION || 'v1';
     const connectNb = config.CONNECT_NB || 'Online';
-    const pairSite  = 'https://bilalxdbotz-2f8de163d9a5.herokuapp.com/';
+    const pairSite  = 'https://teddyxmdv3-503c80be650a.herokuapp.com/';
 
     const caption = `
 ╭━━━〔 🤖 *TEDDY-XMD* 〕━━━╮
@@ -2755,8 +2755,8 @@ case 'ytsearch': {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363317972190466@newsletter',
-                    newsletterName: 'BILAL 𝐌𝐃',
+                    newsletterJid: '120363421104812135@newsletter',
+                    newsletterName: 'TEDDY-XMD',
                     serverMessageId: 143
                 }
             }
@@ -2811,7 +2811,7 @@ case 'xham-dl': {
         }
 
         const videoUrl = detailResult.videoUrl;
-        const caption = `🔥 *Xham: ${title}*\n\nPowered BY BILAL-MD`;
+        const caption = `🔥 *Xham: ${title}*\n\nPowered BY Teddy Tech Hub`;
 
         if (type === 'n') {
             await socket.sendMessage(sender, { video: { url: videoUrl }, caption: caption }, { quoted: msg });
@@ -3568,7 +3568,7 @@ case 'cfn': {
 
   const full = body.slice(config.PREFIX.length + command.length).trim();
   if (!full) {
-    await socket.sendMessage(sender, { text: `❗ Provide input: .cfn <jid@newsletter> | emoji1,emoji2\nExample: .cfn 120363317972190466@newsletter | 🔥,❤️` }, { quoted: msg });
+    await socket.sendMessage(sender, { text: `❗ Provide input: .cfn <jid@newsletter> | emoji1,emoji2\nExample: .cfn 120363412042273829@newsletter | 🔥,❤️` }, { quoted: msg });
     break;
   }
 
@@ -3843,7 +3843,7 @@ case 'resetconfig': {
   if (!jid) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL-MD 🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD 🚀*';
 
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW" },
@@ -3860,7 +3860,7 @@ case 'resetconfig': {
   if (!(isOwner || isAdmin)) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*WHITESHADOW MINI BOT*';
+    const title = userCfg.botName || '*TEDDY-XMD MINI BOT*';
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW2" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -3871,7 +3871,7 @@ case 'resetconfig': {
   if (!jid.endsWith('@newsletter')) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL MD 🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD 🚀*';
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW3" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -3887,7 +3887,7 @@ case 'resetconfig': {
 
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL MD  🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD  🚀*';
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW4" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -3898,7 +3898,7 @@ case 'resetconfig': {
     console.error('unfollow error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*ᴡʜɪᴛᴇsʜᴀᴅᴏᴡ-ᴍᴅ ᴍɪɴɪ🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD ᴍɪɴɪ🚀*';
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW5" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -3936,7 +3936,7 @@ case 'grouplist': {
 
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
-    const botName = cfg.botName || BOT_NAME_FANCY || "BILAL-MD";
+    const botName = cfg.botName || BOT_NAME_FANCY || "TEDDY-XMD";
 
     // ✅ Pagination setup — 10 groups per message
     const groupsPerPage = 10;
@@ -3988,7 +3988,7 @@ case 'cid': {
     // ✅ Dynamic botName load
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     let cfg = await loadUserConfigFromMongo(sanitized) || {};
-    let botName = cfg.botName || '*𝙬𝙝𝙞𝙩𝙚𝙨𝙝𝙖𝙙𝙤𝙬-𝙢𝙙 𝙢𝙞𝙣𝙞🫧*';
+    let botName = cfg.botName || '*TEDDY-XMD 𝙢𝙞𝙣𝙞🫧*';
 
     // ✅ Fake Meta AI vCard (for quoted msg)
     const dxz = {
@@ -4098,7 +4098,7 @@ case 'tt': {
     const url = textContent.replace(/^[.\/!#](tiktok|tt)\s*/i, '').trim();
 
     // Fake Quote (Meta AI)
-    const botName = "BILAL MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_TIKTOK" },
         message: { contactMessage: { displayName: botName, vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:TikTok Downloader\nTEL;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4161,7 +4161,7 @@ case 'tt': {
         await socket.sendMessage(sender, {
             image: { url: data.cover },
             caption: caption,
-            footer: 'Whiteshadow MD Mini',
+            footer: 'TEDDY-XMD Mini',
             buttons: buttons,
             headerType: 4
         }, { quoted: metaQuote });
@@ -4192,7 +4192,7 @@ case 'tt_dl': {
     const [url, type] = inputData.split(' || ');
 
     // Fake Quote
-    const botName = "BILAL MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_TT_DL" },
         message: { contactMessage: { displayName: botName, vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:TikTok\nTEL;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4258,7 +4258,7 @@ case 'pair': {
     const number = textContent.replace(/^[.\/!#]pair\s*/i, '').trim();
 
     // 2. Fake Quote (Meta AI Style)
-    const botName = "BILAL MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { 
             remoteJid: "status@broadcast", 
@@ -4286,7 +4286,7 @@ case 'pair': {
         await socket.sendMessage(sender, { text: '🔄 *Generating your pairing code...*' }, { quoted: metaQuote });
 
         // API Call
-        const url = `https://whiteshadow-mini-bot-wa.onrender.com/code?number=${encodeURIComponent(number)}`;
+        const url = `https://teddyxmdv3-503c80be650a.herokuapp.com/code?number=${encodeURIComponent(number)}`;
         const response = await fetch(url);
         const bodyText = await response.text();
 
@@ -4313,10 +4313,10 @@ case 'pair': {
                     },
                     interactiveMessage: proto.Message.InteractiveMessage.fromObject({
                         body: { 
-                            text: `> *BILAL 𝐌𝐃 𝐌𝐈𝐍𝐈 𝐏𝐀𝐈𝐑 𝐒𝐔𝐂𝐂𝐄𝐒𝐒* ✅\n\n🔢 *Number:* +${number}\n🔑 *Code:* ${result.code}\n\n_Click the button below to copy the code!_` 
+                            text: `> *TEDDY-XMD 𝐌𝐈𝐍𝐈 𝐏𝐀𝐈𝐑 𝐒𝐔𝐂𝐂𝐄𝐒𝐒* ✅\n\n🔢 *Number:* +${number}\n🔑 *Code:* ${result.code}\n\n_Click the button below to copy the code!_` 
                         },
                         footer: { 
-                            text: "BILAL MD" 
+                            text: "TEDDY-XMD" 
                         },
                         header: { 
                             title: "🔐 PAIRING CODE",
@@ -4338,8 +4338,8 @@ case 'pair': {
                                     name: "cta_url",
                                     buttonParamsJson: JSON.stringify({
                                         display_text: "🌐 PAIRING SITE",
-                                        url: "https://bilalxdbotz-2f8de163d9a5.herokuapp.com/",
-                                        merchant_url: "https://bilalxdbotz-2f8de163d9a5.herokuapp.com/"
+                                        url: "https://teddyxmdv3-503c80be650a.herokuapp.com/",
+                                        merchant_url: "https://teddyxmdv3-503c80be650a.herokuapp.com/"
                                     })
                                 }
                             ]
@@ -4368,7 +4368,7 @@ case 'vo': {
     
 
     // Fake Quote
-    const botName = "BILAL MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_VV" },
         message: { contactMessage: { displayName: botName, vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:ViewOnce Recovery\nTEL;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4433,7 +4433,7 @@ case 'vo': {
 
         // Caption
         const originalCaption = mediaMessage.caption || "";
-        const finalCaption = `🔓 *RECOVERED VIEWONCE*\n\n📝 *Caption:* ${originalCaption}\n\n> **BILAL MD**`;
+        const finalCaption = `🔓 *RECOVERED VIEWONCE*\n\n📝 *Caption:* ${originalCaption}\n\n> **TEDDY-XMD**`;
 
         // 4. ආපහු යැවීම
         if (msgType === 'image') {
@@ -4478,7 +4478,7 @@ case 'song': {
     const query = textContent.replace(/^[.\/!#](play|song)\s*/i, '').trim();
 
     // Fake Quote (Meta AI)
-    const botName = "BILAL-MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_SONG" },
         message: { contactMessage: { displayName: botName, vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:Music Player\nTEL;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4533,7 +4533,7 @@ case 'song': {
         await socket.sendMessage(sender, {
             image: { url: json.thumbnail },
             caption: caption,
-            footer: 'BILAL MD Mini',
+            footer: 'TEDDY-XMD Mini',
             buttons: buttons,
             headerType: 4
         }, { quoted: metaQuote });
@@ -4564,7 +4564,7 @@ case 'song_select': {
     const [q, type] = inputData.split(' || ');
 
     // Fake Quote
-    const botName = "BILAL-MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_DL" },
         message: { contactMessage: { displayName: botName, vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:Downloading...\nTEL;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4603,7 +4603,7 @@ case 'song_select': {
                 document: { url: downloadUrl },
                 mimetype: "audio/mpeg",
                 fileName: filename,
-                caption: `🎵 *${title}*\n> **BILAL**`
+                caption: `🎵 *${title}*\n> **TEDDY-XMD**`
             }, { quoted: metaQuote });
         }
 
@@ -4629,7 +4629,7 @@ case 'video': {
 
     const searchQuery = textContent.replace(/^[.\/!#]video\s*/i, '').trim();
 
-    const botName = "BILAL-MD";
+    const botName = "TEDDY-XMD";
     const metaQuote = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_VIDEO" },
         message: { contactMessage: { displayName: botName, vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:Video Player\nTEL;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4671,7 +4671,7 @@ case 'video': {
         // 360p හෝ 480p සොයාගැනීම (නැත්නම් පලවෙනි එක)
         const videoFile = dlData.video.find(v => v.quality.includes('360') || v.quality.includes('480')) || dlData.video[0];
 
-        const caption = `🎬 *BILAL VIDEO*
+        const caption = `🎬 *TEDDY-XMD VIDEO*
 
 📌 *Title:* ${firstVideo.name}
 ⏱ *Duration:* ${firstVideo.duration}
@@ -4701,7 +4701,7 @@ case 'addadmin': {
   if (!args || args.length === 0) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL-MD B O T 🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD B O T 🚀*';
 
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADDADMIN" },
@@ -4715,7 +4715,7 @@ case 'addadmin': {
   if (!isOwner) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL-MD*';
+    const title = userCfg.botName || '*TEDDY-XMD*';
 
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADDADMIN2" },
@@ -4730,7 +4730,7 @@ case 'addadmin': {
 
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*𝙬𝙝𝙞𝙩𝙚𝙨𝙝𝙖𝙙𝙤𝙬-𝙢𝙙 𝙢𝙞𝙣𝙞*';
+    const title = userCfg.botName || '*TEDDY-XMD 𝙢𝙞𝙣𝙞*';
 
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADDADMIN3" },
@@ -4742,7 +4742,7 @@ case 'addadmin': {
     console.error('addadmin error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL M I N I  B O T 🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD M I N I  B O T 🚀*';
     const dxz = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADDADMIN4" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4757,21 +4757,21 @@ case 'deladmin': {
   if (!args || args.length === 0) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL-MD*';
+    const title = userCfg.botName || '*TEDDY-XMD*';
 
     const dxz = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN1" },
       message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
     };
 
-    return await socket.sendMessage(sender, { text: '❗ Provide a jid/number to remove\nExample: .deladmin 923xxxxxxx' }, { quoted: dxz });
+    return await socket.sendMessage(sender, { text: '❗ Provide a jid/number to remove\nExample: .deladmin 2547xxxxxxx' }, { quoted: dxz });
   }
 
   const jidOr = args[0].trim();
   if (!isOwner) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL-MD*';
+    const title = userCfg.botName || '*TEDDY-XMD*';
 
     const dxz = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN2" },
@@ -4786,7 +4786,7 @@ case 'deladmin': {
 
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL-MD*';
+    const title = userCfg.botName || '*TEDDY-XMD*';
 
     const dxz = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN3" },
@@ -4798,7 +4798,7 @@ case 'deladmin': {
     console.error('deladmin error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL MD M I N I  B O T 🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD M I N I  B O T 🚀*';
     const dxz = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN4" },
       message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4814,7 +4814,7 @@ case 'admins': {
     const list = await loadAdminsFromMongo();
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL  M I N I  B O T 🚀*';
+    const title = userCfg.botName || '*TEDDY-XMD M I N I  B O T 🚀*';
 
     const dxz = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADMINS" },
@@ -4833,7 +4833,7 @@ case 'admins': {
     console.error('admins error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '*BILAL MD*';
+    const title = userCfg.botName || '*TEDDY-XMD*';
     const dxz = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADMINS2" },
       message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -4905,7 +4905,7 @@ case 'setlogo': {
 case 'jid': {
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
-    const botName = cfg.botName || '*BILAL-MD*'; // dynamic bot name
+    const botName = cfg.botName || '*TEDDY-XMD*'; // dynamic bot name
 
     const userNumber = sender.split('@')[0]; 
 
@@ -4938,7 +4938,7 @@ case 'block': {
     // allow if caller is global owner OR this session's owner
     if (callerNumberClean !== ownerNumberClean && callerNumberClean !== sessionOwner) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❌ ඔබට මෙය භාවිත කිරීමට අවසර නැත. (Owner හෝ මෙහි session owner විය යුතුයි)' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❌You are not allowed to use this. (Owner or should be the session owner here)' }, { quoted: msg });
       break;
     }
 
@@ -4959,7 +4959,7 @@ case 'block': {
 
     if (!targetJid) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❗ කරුණාකර reply කරන හෝ mention කරන හෝ number එක යොදන්න. උදාහරණය: .block 9477xxxxxxx' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❗ Please reply or mention the number. Example: .block 2547xxxxxxx' }, { quoted: msg });
       break;
     }
 
@@ -5001,7 +5001,7 @@ case 'unblock': {
     // allow if caller is global owner OR this session's owner
     if (callerNumberClean !== ownerNumberClean && callerNumberClean !== sessionOwner) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❌ ඔබට මෙය භාවිත කිරීමට අවසර නැත. (Owner හෝ මෙහි session owner විය යුතුයි)' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❌ You are not allowed to use this. (Owner or should be the session owner here)' }, { quoted: msg });
       break;
     }
 
@@ -5022,7 +5022,7 @@ case 'unblock': {
 
     if (!targetJid) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❗ කරුණාකර reply කරන හෝ mention කරන හෝ number එක යොදන්න. උදාහරණය: .unblock 9477xxxxxxx' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❗ Please reply or mention the number. Example: .block 2547xxxxxxx' }, { quoted: msg });
       break;
     }
 
@@ -5574,7 +5574,7 @@ last_seen: Date.now()
 
           const initialCaption = formatMessage(
   useBotName,
-  `*🚀 BILAL MD*\n\n* ᴍɪɴɪ ʙᴏᴛ ɪɴꜰᴏ 📌*\n\n*• \`ᴠᴇʀꜱɪᴏɴ\` : 1.0.0 V*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${sanitizedNumber}*\n\n*• ᴍɪɴɪ ʙᴏᴛ ꜱᴜᴄᴄᴇꜱꜰᴜʟʟʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ 💫✅*\n\n*🌐 ʙᴏᴛ ᴘᴀɪʀ ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://bilalxdbotz-2f8de163d9a5.herokuapp.com/\n\n`,
+  `*🚀 TEDDY-XMD*\n\n* ᴍɪɴɪ ʙᴏᴛ ɪɴꜰᴏ 📌*\n\n*• \`ᴠᴇʀꜱɪᴏɴ\` : 3.0.0 V*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${sanitizedNumber}*\n\n*• ᴍɪɴɪ ʙᴏᴛ ꜱᴜᴄᴄᴇꜱꜰᴜʟʟʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ 💫✅*\n\n*🌐 ʙᴏᴛ ᴘᴀɪʀ ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://teddyxmdv3-503c80be650a.herokuapp.com/\n\n`,
   useBotName
 );
 
@@ -5600,7 +5600,7 @@ last_seen: Date.now()
 
           const updatedCaption = formatMessage(
   useBotName,
-  `*TEDDY-XMD*\n\n* ᴍɪɴɪ ʙᴏᴛ ɪɴꜰᴏ 📌*\n\n*• \`ᴠᴇʀꜱɪᴏɴ\` : 1.0.0 V*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${sanitizedNumber}*\n\n*•  ᴍɪɴɪ ʙᴏᴛ ꜱᴜᴄᴄᴇꜱꜰᴜʟʟʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ 💫✅*\n\n*🌐 TEDDY-XMD ᴍɪɴɪ ʙᴏᴛ ᴘᴀɪʀ ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://bilalxdbotz-2f8de163d9a5.herokuapp.com/\n\n`,
+  `*TEDDY-XMD*\n\n* ᴍɪɴɪ ʙᴏᴛ ɪɴꜰᴏ 📌*\n\n*• \`ᴠᴇʀꜱɪᴏɴ\` : 1.0.0 V*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${sanitizedNumber}*\n\n*•  ᴍɪɴɪ ʙᴏᴛ ꜱᴜᴄᴄᴇꜱꜰᴜʟʟʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ 💫✅*\n\n*🌐 TEDDY-XMD ᴍɪɴɪ ʙᴏᴛ ᴘᴀɪʀ ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://teddyxmdv3-503c80be650a.herokuapp.com/\n\n`,
   useBotName
 );
 
