@@ -17,7 +17,7 @@
     "@google/genai": "1.22.0",
     "@neoxr/wb": "^6.0.0-rc.33",
     "@octokit/rest": "^20.0.2",
-    "@Teddytech3/MD-Baileys": "^2.0.2",
+    "@Teddytech3/MD-Baileys": "latest",
     "@vitalets/google-translate-api": "^9.2.1",
     "acrcloud": "^1.4.0",
     "aptoide-scraper": "^1.0.1",
