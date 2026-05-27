@@ -29,7 +29,7 @@ const {
   prepareWAMessageMedia,
   generateWAMessageFromContent,
   proto
-} = require('@whiskeysockets/baileys');
+} = require('baileys');
 // ---------------- CONFIG ----------------
 
 const BOT_NAME_FANCY = '*🧸 TEDDY-XMD*';
